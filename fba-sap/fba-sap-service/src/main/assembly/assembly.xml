@@ -50,6 +50,20 @@
             <source>target/classes/log4j2.xml</source>  
             <outputDirectory>conf</outputDirectory>  
         </file> 
+        <file>  
+            <source>target/classes/log4j.xml</source>  
+            <outputDirectory>conf</outputDirectory>  
+        </file> 
+        <file>  
+            <source>src/main/assembly/sapjco3.jar</source>  
+            <outputDirectory>lib</outputDirectory>  
+        </file> 
 	</files>
+	
+	<dependencySets>
+		<dependencySet>
+			<outputDirectory>lib</outputDirectory>
+		</dependencySet>
+	</dependencySets>
 	
 </assembly>
