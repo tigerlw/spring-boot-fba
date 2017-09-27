@@ -22,13 +22,18 @@
 			<groupId>com.ucloudlink.sap</groupId>
 			<artifactId>sapjco3</artifactId>
 			<version>1.0</version>
-			<scope>system</scope> 
-            <systemPath>${basedir}/src/main/assembly/sapjco3.jar</systemPath>
+			<scope>system</scope>
+			<systemPath>${basedir}/src/main/assembly/sapjco3.jar</systemPath>
 		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
+			<!-- <plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin> -->
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
@@ -37,6 +42,7 @@
 					<excludes>
 						<exclude>**/*.properties</exclude>
 						<exclude>**/log4j2.xml</exclude>
+						<exclude>**/log4j.xml</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
@@ -56,5 +62,15 @@
 				</executions>
 			</plugin>
 		</plugins>
+		<!-- <resources>
+			<resource>
+				<directory>src/main/assembly/</directory>
+				<targetPath>BOOT-INF/lib/</targetPath>
+				<includes>
+					<include>**/*.jar</include>
+				</includes>
+			</resource>
+			
+		</resources> -->
 	</build>
 </project>
