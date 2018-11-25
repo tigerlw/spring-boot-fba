@@ -16,9 +16,9 @@
  
     <dubbo:consumer check="false" retries="0"/>
     
-    <dubbo:service interface="com.ucloudlink.dubbox.service.UserService" ref="userServiceT" />
+    <dubbo:service interface="com.camp.dubbox.service.UserService" ref="userServiceT" />
     
-    <bean id="userServiceT" class="com.ucloudlink.dubbox.service.impl.UserServiceImpl" >
+    <bean id="userServiceT" class="com.camp.dubbox.service.impl.UserServiceImpl" >
     </bean>
     
     
